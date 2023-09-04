@@ -1,6 +1,6 @@
 import { InstrumentName } from "types";
 
-export const INSTRUMENTS = ["bd", "sd", "cp", "ch", "oh", "cb", "wd"] as const;
+export const INSTRUMENTS = ["bd", "sd", "cp", "ch", "oh", "cb", "wd", "cy"] as const;
 
 export const HOT_KEYS: { [key: string]: InstrumentName } = {
   "1": "bd",

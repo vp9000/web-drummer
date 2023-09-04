@@ -5,6 +5,15 @@ export type Settings = {
   bpm: number;
 };
 
+export type InstrumentParameters = {
+  volume: number;
+  pitch: number;
+  decay: number;
+  panning: number;
+};
+
+export type InstrumentParameterMap = { [key in InstrumentName]: InstrumentParameters };
+
 export type EngineState = {
   status: "stopped" | "playing" | "paused";
   step: number;

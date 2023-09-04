@@ -13,7 +13,7 @@ export default function InstrumentButton({ name, isSelected, handleSelect, hotKe
     <div
       onClick={handleSelect}
       className={getClasses(
-        "relative flex w-full h-20 items-center justify-center border-2 border-yellow-400 rounded-lg uppercase font-bold transition-all cursor-pointer",
+        "relative flex w-full h-16 items-center justify-center border-2 border-yellow-400 rounded-lg uppercase font-bold transition-all cursor-pointer",
         isSelected ? "bg-yellow-400 text-white" : "bg-transparent text-black"
       )}
     >
