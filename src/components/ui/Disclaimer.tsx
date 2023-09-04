@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { isMobile } from "react-device-detect";
 import { getHideDisclaimerState, setHideDisclaimerState } from "utils/storage";
+import Overlay from "./Overlay";
 
 const getInitialDisclaimerState = () => {
   if (isMobile && !getHideDisclaimerState()) {
@@ -23,7 +24,7 @@ export default function Disclaimer() {
   }
 
   return (
-    <div className='fixed top-0 left-0 bottom-0 right-0 bg-black bg-opacity-75'>
+    <Overlay>
       <div className='flex h-full justify-center items-center text-white text-center'>
         <div className='p-12'>
           <p className='font-bold mb-4'>Greetings, mobile user 👋</p>
@@ -43,6 +44,6 @@ export default function Disclaimer() {
           </div>
         </div>
       </div>
-    </div>
+    </Overlay>
   );
 }
