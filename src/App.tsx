@@ -8,7 +8,7 @@ initializePresets();
 function App() {
   return (
     <>
-      <main className='h-screen flex items-center justify-center bg-gradient-to-tr from-purple-400 to-yellow-400 transform'>
+      <main className='flex justify-center h-screen items-center'>
         <DrumKit />
       </main>
       <ToastContainer position='bottom-right' />
