@@ -2,15 +2,18 @@ import { ToastContainer } from "react-toastify";
 import DrumKit from "./components/drum-kit/DrumKit";
 import "react-toastify/dist/ReactToastify.css";
 import { initializePresets } from "utils/storage";
+import Disclaimer from "components/ui/Disclaimer";
 
 initializePresets();
 
 function App() {
   return (
     <>
-      <main className='h-screen flex items-center justify-center bg-gradient-to-tr from-purple-400 to-yellow-400 transform'>
+      <main className='flex justify-center h-screen items-center'>
         <DrumKit />
       </main>
+
+      <Disclaimer />
       <ToastContainer position='bottom-right' />
     </>
   );

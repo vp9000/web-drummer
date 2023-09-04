@@ -12,6 +12,10 @@
   src: local("Pointless"), url(./assets/fonts/Pointless.ttf) format("truetype");
 }
 
+body {
+  @apply h-full m-0 bg-no-repeat bg-fixed bg-gradient-to-tr from-purple-400 to-yellow-400;
+}
+
 h1,
 h2,
 h3,

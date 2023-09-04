@@ -30,7 +30,7 @@ export default function DrumKit() {
   }, [engineState.status, settings.bpm, incrementStep]);
 
   return (
-    <div>
+    <div className='transform scale-50 sm:scale-75 md:scale-95 lg:scale-100  xl:scale-100 transition-all'>
       <Wrapper>
         <div className='flex justify-end items-center gap-4'>
           <Logo />

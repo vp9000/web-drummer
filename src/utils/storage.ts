@@ -1,4 +1,4 @@
-import { STORAGE_KEY_PRESET } from "data/constants";
+import { HIDE_DISCLAIMER_KEY, STORAGE_KEY_PRESET } from "data/constants";
 import { PresetMap, Sequence, Settings } from "types";
 import defaultPresets from "data/default-presets.json";
 
@@ -48,4 +48,13 @@ export const initializePresets = () => {
 
   const serialized = JSON.stringify(defaultPresets);
   localStorage.setItem(STORAGE_KEY_PRESET, serialized);
+};
+
+export const setHideDisclaimerState = () => {
+  localStorage.setItem(HIDE_DISCLAIMER_KEY, JSON.stringify(true));
+};
+
+export const getHideDisclaimerState = () => {
+  const data = localStorage.getItem(HIDE_DISCLAIMER_KEY);
+  return data;
 };
