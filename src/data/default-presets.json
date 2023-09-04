@@ -126,6 +126,24 @@
         { "stepNumber": 13, "active": false, "accent": false },
         { "stepNumber": 14, "active": false, "accent": false },
         { "stepNumber": 15, "active": false, "accent": false }
+      ],
+      "cy": [
+        { "stepNumber": 0, "active": false, "accent": false },
+        { "stepNumber": 1, "active": false, "accent": false },
+        { "stepNumber": 2, "active": false, "accent": false },
+        { "stepNumber": 3, "active": false, "accent": false },
+        { "stepNumber": 4, "active": false, "accent": false },
+        { "stepNumber": 5, "active": false, "accent": false },
+        { "stepNumber": 6, "active": false, "accent": false },
+        { "stepNumber": 7, "active": false, "accent": false },
+        { "stepNumber": 8, "active": false, "accent": false },
+        { "stepNumber": 9, "active": false, "accent": false },
+        { "stepNumber": 10, "active": false, "accent": false },
+        { "stepNumber": 11, "active": false, "accent": false },
+        { "stepNumber": 12, "active": false, "accent": false },
+        { "stepNumber": 13, "active": false, "accent": false },
+        { "stepNumber": 14, "active": false, "accent": false },
+        { "stepNumber": 15, "active": false, "accent": false }
       ]
     },
     "settings": { "steps": 16, "bpm": 100 }
@@ -252,6 +270,24 @@
         { "stepNumber": 8, "active": false, "accent": false },
         { "stepNumber": 9, "active": false, "accent": false },
         { "stepNumber": 10, "active": true, "accent": false },
+        { "stepNumber": 11, "active": false, "accent": false },
+        { "stepNumber": 12, "active": false, "accent": false },
+        { "stepNumber": 13, "active": false, "accent": false },
+        { "stepNumber": 14, "active": false, "accent": false },
+        { "stepNumber": 15, "active": false, "accent": false }
+      ],
+      "cy": [
+        { "stepNumber": 0, "active": false, "accent": false },
+        { "stepNumber": 1, "active": false, "accent": false },
+        { "stepNumber": 2, "active": false, "accent": false },
+        { "stepNumber": 3, "active": false, "accent": false },
+        { "stepNumber": 4, "active": false, "accent": false },
+        { "stepNumber": 5, "active": false, "accent": false },
+        { "stepNumber": 6, "active": false, "accent": false },
+        { "stepNumber": 7, "active": false, "accent": false },
+        { "stepNumber": 8, "active": false, "accent": false },
+        { "stepNumber": 9, "active": false, "accent": false },
+        { "stepNumber": 10, "active": false, "accent": false },
         { "stepNumber": 11, "active": false, "accent": false },
         { "stepNumber": 12, "active": false, "accent": false },
         { "stepNumber": 13, "active": false, "accent": false },
@@ -388,6 +424,24 @@
         { "stepNumber": 13, "active": false, "accent": false },
         { "stepNumber": 14, "active": false, "accent": false },
         { "stepNumber": 15, "active": false, "accent": false }
+      ],
+      "cy": [
+        { "stepNumber": 0, "active": false, "accent": false },
+        { "stepNumber": 1, "active": false, "accent": false },
+        { "stepNumber": 2, "active": false, "accent": false },
+        { "stepNumber": 3, "active": false, "accent": false },
+        { "stepNumber": 4, "active": false, "accent": false },
+        { "stepNumber": 5, "active": false, "accent": false },
+        { "stepNumber": 6, "active": false, "accent": false },
+        { "stepNumber": 7, "active": false, "accent": false },
+        { "stepNumber": 8, "active": false, "accent": false },
+        { "stepNumber": 9, "active": false, "accent": false },
+        { "stepNumber": 10, "active": false, "accent": false },
+        { "stepNumber": 11, "active": false, "accent": false },
+        { "stepNumber": 12, "active": false, "accent": false },
+        { "stepNumber": 13, "active": false, "accent": false },
+        { "stepNumber": 14, "active": false, "accent": false },
+        { "stepNumber": 15, "active": false, "accent": false }
       ]
     },
     "settings": { "steps": 16, "bpm": 120 }
@@ -519,6 +573,24 @@
         { "stepNumber": 13, "active": false, "accent": false },
         { "stepNumber": 14, "active": true, "accent": false },
         { "stepNumber": 15, "active": true, "accent": false }
+      ],
+      "cy": [
+        { "stepNumber": 0, "active": false, "accent": false },
+        { "stepNumber": 1, "active": false, "accent": false },
+        { "stepNumber": 2, "active": false, "accent": false },
+        { "stepNumber": 3, "active": false, "accent": false },
+        { "stepNumber": 4, "active": false, "accent": false },
+        { "stepNumber": 5, "active": false, "accent": false },
+        { "stepNumber": 6, "active": false, "accent": false },
+        { "stepNumber": 7, "active": false, "accent": false },
+        { "stepNumber": 8, "active": false, "accent": false },
+        { "stepNumber": 9, "active": false, "accent": false },
+        { "stepNumber": 10, "active": false, "accent": false },
+        { "stepNumber": 11, "active": false, "accent": false },
+        { "stepNumber": 12, "active": false, "accent": false },
+        { "stepNumber": 13, "active": false, "accent": false },
+        { "stepNumber": 14, "active": false, "accent": false },
+        { "stepNumber": 15, "active": false, "accent": false }
       ]
     },
     "settings": { "steps": 16, "bpm": 129 }
