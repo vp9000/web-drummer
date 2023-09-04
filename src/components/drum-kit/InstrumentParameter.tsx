@@ -1,18 +1,15 @@
-type Props = React.ComponentProps<"input">;
+import Slider from "../ui/Slider";
+
+type Props = {
+  name: string;
+  value: number;
+  onChange: React.ChangeEventHandler<HTMLInputElement>;
+};
 
 export default function InstrumentParameter({ name, value, onChange }: Props) {
   return (
     <div>
-      <div>
-        <input
-          id='bpm'
-          type='range'
-          className='h-2 w-24 bg-white bg-opacity-50 rounded-lg appearance-none cursor-pointer accent-purple-400 '
-          value={value}
-          onChange={onChange}
-        />
-      </div>
-
+      <Slider id={name} value={value ?? 0} onChange={onChange} />
       <div className='text-center mt-1 text-xs text-black text-opacity-50'>{name}</div>
     </div>
   );

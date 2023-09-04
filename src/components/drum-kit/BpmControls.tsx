@@ -2,6 +2,7 @@ import { convertBpmToRangeInput, convertRangeInputToBpm } from "utils/tempo";
 import useDrumkitStore from "../../stores/useDrumkitStore";
 import ParameterSection from "./ParameterSection";
 import DigitalDisplay from "./DigitalDisplay";
+import Slider from "../ui/Slider";
 
 export default function BpmControls() {
   const { updateBpm, settings } = useDrumkitStore();
@@ -18,13 +19,7 @@ export default function BpmControls() {
       </div>
 
       <div className='h-4 mt-1'>
-        <input
-          id='bpm'
-          type='range'
-          value={convertBpmToRangeInput(settings.bpm)}
-          className='h-2 w-24 bg-white bg-opacity-50 rounded-lg appearance-none cursor-pointer accent-purple-400 '
-          onChange={onBpmChange}
-        />
+        <Slider id='bpm' value={convertBpmToRangeInput(settings.bpm)} onChange={onBpmChange} />
       </div>
     </ParameterSection>
   );
