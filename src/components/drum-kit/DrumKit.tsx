@@ -9,6 +9,7 @@ import InstrumentSelector from "./InstrumentSelector";
 import Logo from "./Logo";
 import Instructions from "./Instructions";
 import PresetControls from "./PresetControls";
+import InstrumentParameterSection from "./InstrumentParameterSection";
 
 export default function DrumKit() {
   const { engineState, settings, incrementStep } = useDrumkitStore();
@@ -40,6 +41,7 @@ export default function DrumKit() {
         </div>
 
         <InstrumentSelector />
+        <InstrumentParameterSection activeInstrument={engineState.selectedInstrument} />
         <StepSequencer activeInstrument={engineState.selectedInstrument} />
 
         <SoundEngine />

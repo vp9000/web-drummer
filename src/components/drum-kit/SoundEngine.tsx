@@ -1,7 +1,7 @@
 import { useEffect, useMemo } from "react";
 import useSound from "use-sound";
 import useDrumkitStore from "stores/useDrumkitStore";
-import { InstrumentName } from "types";
+import { InstrumentName, InstrumentParameterMap } from "types";
 
 import bd from "assets/audio/bd.mp3";
 import sd from "assets/audio/sd.mp3";
@@ -10,17 +10,30 @@ import oh from "assets/audio/oh.mp3";
 import cp from "assets/audio/cp.mp3";
 import cb from "assets/audio/cb.mp3";
 import wd from "assets/audio/wd.mp3";
+import cy from "assets/audio/cy.mp3";
+
+const getInstrumentParameters = (name: InstrumentName, parameterMap: InstrumentParameterMap) => {
+  const { volume, pitch, decay } = parameterMap[name];
+
+  return {
+    volume,
+    playbackRate: pitch,
+    decay,
+    interrupt: false,
+  };
+};
 
 export default function SoundEngine() {
-  const { sequence, engineState } = useDrumkitStore();
+  const { sequence, engineState, instrumentParameterMap } = useDrumkitStore();
 
-  const [playBd] = useSound(bd, { interrupt: false });
-  const [playSd] = useSound(sd, { interrupt: false });
-  const [playCh] = useSound(ch, { interrupt: false });
-  const [playCp] = useSound(cp, { interrupt: false });
-  const [playOh] = useSound(oh, { interrupt: false });
-  const [playCb] = useSound(cb, { interrupt: false });
-  const [playWd] = useSound(wd, { interrupt: false });
+  const [playBd] = useSound(bd, getInstrumentParameters("bd", instrumentParameterMap));
+  const [playSd] = useSound(sd, getInstrumentParameters("sd", instrumentParameterMap));
+  const [playCh] = useSound(ch, getInstrumentParameters("ch", instrumentParameterMap));
+  const [playCp] = useSound(cp, getInstrumentParameters("cp", instrumentParameterMap));
+  const [playOh] = useSound(oh, getInstrumentParameters("oh", instrumentParameterMap));
+  const [playCb] = useSound(cb, getInstrumentParameters("cb", instrumentParameterMap));
+  const [playWd] = useSound(wd, getInstrumentParameters("wd", instrumentParameterMap));
+  const [playCy] = useSound(cy, getInstrumentParameters("cy", instrumentParameterMap));
 
   const triggers: { [key in InstrumentName]: () => void } = useMemo(
     () => ({
@@ -31,8 +44,9 @@ export default function SoundEngine() {
       cp: playCp,
       cb: playCb,
       wd: playWd,
+      cy: playCy,
     }),
-    [playBd, playCb, playCh, playCp, playOh, playSd, playWd]
+    [playBd, playCb, playCh, playCp, playOh, playSd, playWd, playCy]
   );
 
   useEffect(() => {

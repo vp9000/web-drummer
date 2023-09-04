@@ -1,17 +1,36 @@
 import { create } from "zustand";
 import { produce } from "immer";
-import { Sequence, Settings, EngineState, StepData, InstrumentName, Preset } from "../types";
-import { DEFAULT_SEQUENCE, DEFAULT_SETTINGS, DEFAULT_STATE } from "data/defaults";
+import {
+  Sequence,
+  Settings,
+  EngineState,
+  StepData,
+  InstrumentName,
+  Preset,
+  InstrumentParameterMap,
+  InstrumentParameters,
+} from "../types";
+import {
+  DEFAULT_INSTRUMENT_PARAMETER_MAP,
+  DEFAULT_SEQUENCE,
+  DEFAULT_SETTINGS,
+  DEFAULT_STATE,
+} from "data/defaults";
 import { loadPreset } from "utils/storage";
 
 type DrumkitStore = {
   settings: Settings;
+  instrumentParameterMap: InstrumentParameterMap;
   engineState: EngineState;
   sequence: Sequence;
   incrementStep: () => void;
   togglePlayPause: () => void;
   stop: () => void;
   updateBpm: (bpm: number) => void;
+  updateInstrumentParameter: (
+    instrumentName: InstrumentName,
+    parameterData: InstrumentParameters
+  ) => void;
   updateSteps: (steps: number) => void;
   updateSequence: (instrument: InstrumentName, stepNumber: number, stepData: StepData) => void;
   updateSelectedInstrument: (instrument: InstrumentName) => void;
@@ -24,6 +43,7 @@ const getInitialState = () => {
 
   return {
     engineState: DEFAULT_STATE,
+    instrumentParameterMap: DEFAULT_INSTRUMENT_PARAMETER_MAP,
     settings: preset ? loadPreset("1")?.settings : DEFAULT_SETTINGS,
     sequence: preset ? loadPreset("1")?.sequence : DEFAULT_SEQUENCE,
   };
@@ -60,6 +80,12 @@ const useDrumkitStore = create<DrumkitStore>(set => ({
     set(
       produce(({ settings }: DrumkitStore) => {
         settings.steps = steps;
+      })
+    ),
+  updateInstrumentParameter: (instrumentName, parameterData) =>
+    set(
+      produce(({ instrumentParameterMap }: DrumkitStore) => {
+        instrumentParameterMap[instrumentName] = parameterData;
       })
     ),
   updateSequence: (instrument, stepNumber, stepData) =>
