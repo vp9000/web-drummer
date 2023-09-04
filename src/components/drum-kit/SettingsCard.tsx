@@ -5,7 +5,7 @@ type Props = {
   name: string;
 };
 
-export default function ParameterSection({ children, name }: Props) {
+export default function SettingsCard({ children, name }: Props) {
   return (
     <div>
       <div className='border-2 border-yellow-400 rounded-xl h-28 flex items-center p-4'>

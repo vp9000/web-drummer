@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import useDrumkitStore from "../../stores/useDrumkitStore";
 import Icon from "../icons/Icon";
-import ParameterSection from "./ParameterSection";
+import ParameterSection from "./SettingsCard";
 import TextButton from "components/ui/TextButton";
 
 export default function TransportControls() {

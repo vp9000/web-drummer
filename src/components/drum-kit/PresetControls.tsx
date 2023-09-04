@@ -1,6 +1,6 @@
 import Icon from "components/icons/Icon";
 import DigitalDisplay from "./DigitalDisplay";
-import ParameterSection from "./ParameterSection";
+import ParameterSection from "./SettingsCard";
 import TextButton from "components/ui/TextButton";
 import useDrumkitStore from "stores/useDrumkitStore";
 import { deletePreset, loadPreset, savePreset } from "utils/storage";

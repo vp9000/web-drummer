@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import Wrapper from "./Wrapper";
+import Case from "./Case";
 import BpmControls from "./BpmControls";
 import useDrumkitStore from "../../stores/useDrumkitStore";
 import StepSequencer from "./StepSequencer";
@@ -32,7 +32,7 @@ export default function DrumKit() {
 
   return (
     <div className='transform scale-50 sm:scale-75 md:scale-95 lg:scale-100  xl:scale-100 transition-all'>
-      <Wrapper>
+      <Case>
         <div className='flex justify-end items-center gap-4'>
           <Logo />
           <PresetControls />
@@ -45,7 +45,7 @@ export default function DrumKit() {
         <StepSequencer activeInstrument={engineState.selectedInstrument} />
 
         <SoundEngine />
-      </Wrapper>
+      </Case>
 
       <Instructions />
     </div>
