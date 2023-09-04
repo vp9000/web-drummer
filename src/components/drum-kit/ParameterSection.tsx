@@ -1,3 +1,5 @@
+import DescriptiveText from "components/ui/DescriptiveText";
+
 type Props = {
   children: React.ReactNode | React.ReactNode[];
   name: string;
@@ -10,7 +12,7 @@ export default function ParameterSection({ children, name }: Props) {
         <div>{children}</div>
       </div>
 
-      <div className='text-center mt-1 text-xs text-black text-opacity-50'>{name}</div>
+      <DescriptiveText>{name}</DescriptiveText>
     </div>
   );
 }

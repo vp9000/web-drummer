@@ -1,3 +1,4 @@
+import DescriptiveText from "components/ui/DescriptiveText";
 import Slider from "../ui/Slider";
 
 type Props = {
@@ -10,7 +11,7 @@ export default function InstrumentParameter({ name, value, onChange }: Props) {
   return (
     <div>
       <Slider id={name} value={value ?? 0} onChange={onChange} />
-      <div className='text-center mt-1 text-xs text-black text-opacity-50'>{name}</div>
+      <DescriptiveText>{name}</DescriptiveText>
     </div>
   );
 }
