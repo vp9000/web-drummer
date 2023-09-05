@@ -30,6 +30,10 @@ export type InstrumentName = (typeof INSTRUMENTS)[number];
 
 export type Sequence = { [key in InstrumentName]: StepData[] };
 
-export type Preset = { settings: Settings; sequence: Sequence };
+export type Preset = {
+  settings: Settings;
+  sequence: Sequence;
+  instrumentParameterMap: InstrumentParameterMap;
+};
 
 export type PresetMap = { [key: string]: Preset };
