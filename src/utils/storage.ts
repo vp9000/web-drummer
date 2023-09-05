@@ -1,5 +1,5 @@
 import { HIDE_DISCLAIMER_KEY, STORAGE_KEY_PRESET } from "data/constants";
-import { PresetMap, Sequence, Settings } from "types";
+import { InstrumentParameterMap, PresetMap, Sequence, Settings } from "types";
 import defaultPresets from "data/default-presets.json";
 
 /**
@@ -20,9 +20,14 @@ export const loadPreset = (presetName: string) => {
   return presets[presetName];
 };
 
-export const savePreset = (presetName: string, sequence: Sequence, settings: Settings) => {
+export const savePreset = (
+  presetName: string,
+  sequence: Sequence,
+  settings: Settings,
+  instrumentParameterMap: InstrumentParameterMap
+) => {
   const presets = loadPresets();
-  presets[presetName] = { sequence, settings };
+  presets[presetName] = { sequence, settings, instrumentParameterMap };
 
   const serialized = JSON.stringify(presets);
   localStorage.setItem(STORAGE_KEY_PRESET, serialized);

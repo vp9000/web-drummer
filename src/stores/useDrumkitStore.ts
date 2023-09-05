@@ -43,9 +43,11 @@ const getInitialState = () => {
 
   return {
     engineState: DEFAULT_STATE,
-    instrumentParameterMap: DEFAULT_INSTRUMENT_PARAMETER_MAP,
-    settings: preset ? loadPreset("1")?.settings : DEFAULT_SETTINGS,
-    sequence: preset ? loadPreset("1")?.sequence : DEFAULT_SEQUENCE,
+    instrumentParameterMap: preset
+      ? preset?.instrumentParameterMap
+      : DEFAULT_INSTRUMENT_PARAMETER_MAP,
+    settings: preset ? preset?.settings : DEFAULT_SETTINGS,
+    sequence: preset ? preset?.sequence : DEFAULT_SEQUENCE,
   };
 };
 
@@ -105,6 +107,7 @@ const useDrumkitStore = create<DrumkitStore>(set => ({
       produce((state: DrumkitStore) => {
         state.sequence = preset.sequence;
         state.settings = preset.settings;
+        state.instrumentParameterMap = preset.instrumentParameterMap;
       })
     ),
   clearPattern: () =>
@@ -113,6 +116,7 @@ const useDrumkitStore = create<DrumkitStore>(set => ({
         state.sequence = DEFAULT_SEQUENCE;
         state.settings = DEFAULT_SETTINGS;
         state.engineState = DEFAULT_STATE;
+        state.instrumentParameterMap = DEFAULT_INSTRUMENT_PARAMETER_MAP;
       })
     ),
 }));

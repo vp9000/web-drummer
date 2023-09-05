@@ -58,7 +58,7 @@
       "oh": [
         { "stepNumber": 0, "active": false, "accent": false },
         { "stepNumber": 1, "active": false, "accent": false },
-        { "stepNumber": 2, "active": false, "accent": false },
+        { "stepNumber": 2, "active": true, "accent": false },
         { "stepNumber": 3, "active": false, "accent": false },
         { "stepNumber": 4, "active": false, "accent": false },
         { "stepNumber": 5, "active": false, "accent": false },
@@ -81,7 +81,7 @@
         { "stepNumber": 4, "active": true, "accent": false },
         { "stepNumber": 5, "active": false, "accent": false },
         { "stepNumber": 6, "active": false, "accent": false },
-        { "stepNumber": 7, "active": false, "accent": false },
+        { "stepNumber": 7, "active": true, "accent": false },
         { "stepNumber": 8, "active": false, "accent": false },
         { "stepNumber": 9, "active": true, "accent": false },
         { "stepNumber": 10, "active": false, "accent": false },
@@ -112,12 +112,12 @@
       "wd": [
         { "stepNumber": 0, "active": false, "accent": false },
         { "stepNumber": 1, "active": false, "accent": false },
-        { "stepNumber": 2, "active": false, "accent": false },
+        { "stepNumber": 2, "active": true, "accent": false },
         { "stepNumber": 3, "active": false, "accent": false },
         { "stepNumber": 4, "active": false, "accent": false },
         { "stepNumber": 5, "active": false, "accent": false },
         { "stepNumber": 6, "active": false, "accent": false },
-        { "stepNumber": 7, "active": false, "accent": false },
+        { "stepNumber": 7, "active": true, "accent": false },
         { "stepNumber": 8, "active": false, "accent": false },
         { "stepNumber": 9, "active": false, "accent": false },
         { "stepNumber": 10, "active": false, "accent": false },
@@ -146,7 +146,17 @@
         { "stepNumber": 15, "active": false, "accent": false }
       ]
     },
-    "settings": { "steps": 16, "bpm": 100 }
+    "settings": { "steps": 16, "bpm": 100 },
+    "instrumentParameterMap": {
+      "bd": { "volume": 0.83, "pitch": 0.98, "decay": 0.5, "panning": 0.5 },
+      "ch": { "volume": 0.8, "pitch": 1.14, "decay": 0.5, "panning": 0.5 },
+      "cp": { "volume": 0.8, "pitch": 1.25, "decay": 0.5, "panning": 0.5 },
+      "oh": { "volume": 0.42, "pitch": 0.8, "decay": 0.5, "panning": 0.5 },
+      "sd": { "volume": 0.8, "pitch": 1.22, "decay": 0.5, "panning": 0.5 },
+      "cb": { "volume": 0.8, "pitch": 1, "decay": 0.5, "panning": 0.5 },
+      "wd": { "volume": 0.8, "pitch": 0.99, "decay": 0.5, "panning": 0.5 },
+      "cy": { "volume": 0.21, "pitch": 0.7, "decay": 0.5, "panning": 0.5 }
+    }
   },
   "2": {
     "sequence": {
@@ -295,7 +305,17 @@
         { "stepNumber": 15, "active": false, "accent": false }
       ]
     },
-    "settings": { "steps": 16, "bpm": 172 }
+    "settings": { "steps": 16, "bpm": 172 },
+    "instrumentParameterMap": {
+      "bd": { "volume": 0.8, "pitch": 1, "decay": 0.5, "panning": 0.5 },
+      "ch": { "volume": 0.8, "pitch": 1, "decay": 0.5, "panning": 0.5 },
+      "cp": { "volume": 0.8, "pitch": 1, "decay": 0.5, "panning": 0.5 },
+      "oh": { "volume": 0.8, "pitch": 1, "decay": 0.5, "panning": 0.5 },
+      "sd": { "volume": 0.8, "pitch": 1, "decay": 0.5, "panning": 0.5 },
+      "cb": { "volume": 0.8, "pitch": 1, "decay": 0.5, "panning": 0.5 },
+      "wd": { "volume": 0.8, "pitch": 1, "decay": 0.5, "panning": 0.5 },
+      "cy": { "volume": 0.8, "pitch": 1, "decay": 0.5, "panning": 0.5 }
+    }
   },
   "3": {
     "sequence": {
@@ -393,8 +413,8 @@
         { "stepNumber": 0, "active": true, "accent": false },
         { "stepNumber": 1, "active": false, "accent": false },
         { "stepNumber": 2, "active": false, "accent": false },
-        { "stepNumber": 3, "active": false, "accent": false },
-        { "stepNumber": 4, "active": true, "accent": false },
+        { "stepNumber": 3, "active": true, "accent": false },
+        { "stepNumber": 4, "active": false, "accent": false },
         { "stepNumber": 5, "active": false, "accent": false },
         { "stepNumber": 6, "active": false, "accent": false },
         { "stepNumber": 7, "active": false, "accent": false },
@@ -444,7 +464,17 @@
         { "stepNumber": 15, "active": false, "accent": false }
       ]
     },
-    "settings": { "steps": 16, "bpm": 120 }
+    "settings": { "steps": 16, "bpm": 120 },
+    "instrumentParameterMap": {
+      "bd": { "volume": 0.81, "pitch": 1.1, "decay": 0.5, "panning": 0.5 },
+      "ch": { "volume": 0.41, "pitch": 1.21, "decay": 0.5, "panning": 0.5 },
+      "cp": { "volume": 0.8, "pitch": 1.18, "decay": 0.5, "panning": 0.5 },
+      "oh": { "volume": 0.8, "pitch": 0.83, "decay": 0.5, "panning": 0.5 },
+      "sd": { "volume": 0.8, "pitch": 1, "decay": 0.5, "panning": 0.5 },
+      "cb": { "volume": 0.39, "pitch": 1.29, "decay": 0.5, "panning": 0.5 },
+      "wd": { "volume": 0.77, "pitch": 0.97, "decay": 0.5, "panning": 0.5 },
+      "cy": { "volume": 0.8, "pitch": 1, "decay": 0.5, "panning": 0.5 }
+    }
   },
   "4": {
     "sequence": {
@@ -593,6 +623,16 @@
         { "stepNumber": 15, "active": false, "accent": false }
       ]
     },
-    "settings": { "steps": 16, "bpm": 129 }
+    "settings": { "steps": 16, "bpm": 129 },
+    "instrumentParameterMap": {
+      "bd": { "volume": 0.8, "pitch": 1, "decay": 0.5, "panning": 0.5 },
+      "ch": { "volume": 0.8, "pitch": 1, "decay": 0.5, "panning": 0.5 },
+      "cp": { "volume": 0.8, "pitch": 1, "decay": 0.5, "panning": 0.5 },
+      "oh": { "volume": 0.8, "pitch": 1, "decay": 0.5, "panning": 0.5 },
+      "sd": { "volume": 0.8, "pitch": 1, "decay": 0.5, "panning": 0.5 },
+      "cb": { "volume": 0.8, "pitch": 1, "decay": 0.5, "panning": 0.5 },
+      "wd": { "volume": 0.8, "pitch": 1, "decay": 0.5, "panning": 0.5 },
+      "cy": { "volume": 0.8, "pitch": 1, "decay": 0.5, "panning": 0.5 }
+    }
   }
 }

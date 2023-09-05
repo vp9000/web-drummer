@@ -9,7 +9,8 @@ import { toast } from "react-toastify";
 
 export default function PresetControls() {
   const [presetNumber, setPresetNumber] = useState(1);
-  const { sequence, settings, clearPattern, importPreset } = useDrumkitStore();
+  const { sequence, settings, instrumentParameterMap, clearPattern, importPreset } =
+    useDrumkitStore();
 
   /**
    * Update store when preset changes
@@ -41,7 +42,7 @@ export default function PresetControls() {
   };
 
   const handleSavePreset = () => {
-    savePreset(presetNumber.toString(), sequence, settings);
+    savePreset(presetNumber.toString(), sequence, settings, instrumentParameterMap);
     toast("Preset saved! 🤘");
   };
 
