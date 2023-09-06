@@ -1,6 +1,8 @@
 import Icon from "components/icons/Icon";
 import { useState } from "react";
 import Overlay from "./Overlay";
+import Credits from "./Credits";
+import Config from "./Config";
 
 export default function Footer() {
   const [showCredits, setShowCredits] = useState(false);
@@ -22,7 +24,9 @@ export default function Footer() {
       )}
 
       <div className='fixed bottom-1 right-2 text-white text-opacity-70 text-xs'>
-        <button onClick={() => setShowCredits(true)}>Credits</button>{" "}
+        <Config />
+        <span className='px-1'>|</span>
+        <Credits />
         <span className='px-1'>|</span>
         <a href='https://github.com/vp9000/web-drummer' target='_blank' rel='noreferrer'>
           Source <Icon type='faExternalLink' />

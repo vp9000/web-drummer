@@ -43,7 +43,6 @@ export default function DrumKit() {
         <InstrumentSelector />
         <InstrumentParameterSection activeInstrument={engineState.selectedInstrument} />
         <StepSequencer activeInstrument={engineState.selectedInstrument} />
-
         <SoundEngine />
       </Case>
 

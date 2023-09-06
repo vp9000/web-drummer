@@ -27,7 +27,7 @@ export default function TransportControls() {
 
   return (
     <ParameterSection name='Transport'>
-      <div className='flex gap-4 justify-center text-3xl text-purple-600'>
+      <div className='flex gap-3 justify-center text-3xl text-purple-600'>
         <TextButton onClick={stop} className='w-8'>
           <Icon type='faStop' />
         </TextButton>

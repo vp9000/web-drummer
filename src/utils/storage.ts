@@ -1,17 +1,15 @@
-import { InstrumentParameterMap, PresetMap, Sequence, Settings } from "types";
+import { PresetMap } from "types";
 import { HIDE_DISCLAIMER_KEY, STORAGE_KEY_PRESET } from "data/constants";
-import defaultPresets from "data/default-presets.json";
 import { processPresetData } from "./validation";
 import { toast } from "react-toastify";
+import defaultPresets from "data/default-presets.json";
 
-/**
- * TODO: validate data loaded from local storage
- */
-export const loadPresets = (): PresetMap => {
+export const loadPresetMapFromLocalStorage = (): PresetMap => {
   const data = localStorage.getItem(STORAGE_KEY_PRESET);
+  const fallback = defaultPresets;
 
   if (!data) {
-    return {};
+    return fallback;
   }
 
   try {
@@ -19,48 +17,13 @@ export const loadPresets = (): PresetMap => {
     return presetMap;
   } catch (err) {
     console.error(err);
-    toast.info("Invalid preset data 😢 Falling back to empty pattern");
-    return {};
+    toast.info("Invalid preset data 😢 Falling back to default presets");
+    return fallback;
   }
 };
 
-export const loadPreset = (presetName: string) => {
-  const presets = loadPresets();
-  return presets[presetName];
-};
-
-export const savePreset = (
-  presetName: string,
-  sequence: Sequence,
-  settings: Settings,
-  instrumentParameterMap: InstrumentParameterMap
-) => {
-  const presets = loadPresets();
-  presets[presetName] = { sequence, settings, instrumentParameterMap };
-
-  const serialized = JSON.stringify(presets);
-  localStorage.setItem(STORAGE_KEY_PRESET, serialized);
-};
-
-export const deletePreset = (presetName: string) => {
-  const presets = loadPresets();
-
-  if (presets[presetName]) {
-    delete presets[presetName];
-  }
-
-  const serialized = JSON.stringify(presets);
-  localStorage.setItem(STORAGE_KEY_PRESET, serialized);
-};
-
-export const initializePresets = () => {
-  const presetData = localStorage.getItem(STORAGE_KEY_PRESET);
-
-  if (presetData) {
-    return;
-  }
-
-  const serialized = JSON.stringify(defaultPresets);
+export const savePresetMapToLocalStorage = (presetMap: PresetMap) => {
+  const serialized = JSON.stringify(presetMap);
   localStorage.setItem(STORAGE_KEY_PRESET, serialized);
 };
 
