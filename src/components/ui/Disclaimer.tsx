@@ -25,7 +25,7 @@ export default function Disclaimer() {
 
   return (
     <Overlay>
-      <div className='flex h-full justify-center items-center text-white text-center'>
+      <div className='text-center'>
         <div className='p-12'>
           <p className='font-bold mb-4'>Greetings, mobile user 👋</p>
           <p className='font-bold'>
