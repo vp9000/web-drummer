@@ -13,6 +13,7 @@ type DrumkitStore = {
     instrumentParameterMap: InstrumentParameterMap
   ) => void;
   deletePreset: (presetName: string) => void;
+  importPresets: (presetMap: PresetMap) => void;
   resetPresets: () => void;
 };
 
@@ -32,6 +33,13 @@ const usePresetStore = create<DrumkitStore>(set => ({
           delete presetMap.data[presetName];
           savePresetMapToLocalStorage(presetMap);
         }
+      })
+    ),
+  importPresets: presetMap =>
+    set(
+      produce((state: DrumkitStore) => {
+        state.presetMap = presetMap;
+        savePresetMapToLocalStorage(presetMap);
       })
     ),
   resetPresets: () =>

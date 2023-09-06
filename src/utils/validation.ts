@@ -1,7 +1,11 @@
 import { PRESET_VERSION } from "data/constants";
 import { PresetMap } from "types";
 
-export const processPresetData = (input: string): PresetMap => {
+export const processPresetData = (input: unknown): PresetMap => {
+  if (typeof input !== "string") {
+    throw new Error("Invalid data type");
+  }
+
   const rawInput = JSON.parse(input);
 
   if (!(typeof rawInput === "object" && !Array.isArray(rawInput) && rawInput !== null)) {
