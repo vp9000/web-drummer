@@ -1,5 +1,5 @@
-const MIN_PITCH = 0.7;
-const MAX_PITCH = 1.5;
+const MIN_PITCH = 0.8;
+const MAX_PITCH = 1.3;
 
 export const convertRangeValueToPitch = (value: number) => {
   const range = MAX_PITCH - MIN_PITCH;

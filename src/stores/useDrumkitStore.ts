@@ -16,6 +16,7 @@ import {
   DEFAULT_SETTINGS,
   DEFAULT_STATE,
 } from "data/defaults";
+import usePresetStore from "./usePresetStore";
 
 type DrumkitStore = {
   settings: Settings;
@@ -38,11 +39,22 @@ type DrumkitStore = {
   resetEngineState: () => void;
 };
 
+const getInitialState = () => {
+  const presets = usePresetStore.getState().presetMap;
+  const initialPreset = presets.data["1"];
+
+  return {
+    engineState: DEFAULT_STATE,
+    instrumentParameterMap: initialPreset
+      ? initialPreset.instrumentParameterMap
+      : DEFAULT_INSTRUMENT_PARAMETER_MAP,
+    settings: initialPreset ? initialPreset.settings : DEFAULT_SETTINGS,
+    sequence: initialPreset ? initialPreset.sequence : DEFAULT_SEQUENCE,
+  };
+};
+
 const useDrumkitStore = create<DrumkitStore>(set => ({
-  engineState: DEFAULT_STATE,
-  instrumentParameterMap: DEFAULT_INSTRUMENT_PARAMETER_MAP,
-  settings: DEFAULT_SETTINGS,
-  sequence: DEFAULT_SEQUENCE,
+  ...getInitialState(),
   incrementStep: () =>
     set(
       produce(({ engineState, settings }: DrumkitStore) => {
