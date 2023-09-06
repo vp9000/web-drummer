@@ -1,11 +1,9 @@
-import { ToastContainer } from "react-toastify";
-import DrumKit from "./components/drum-kit/DrumKit";
 import "react-toastify/dist/ReactToastify.css";
-import { initializePresets } from "utils/storage";
+import { ToastContainer } from "react-toastify";
+
+import DrumKit from "./components/drum-kit/DrumKit";
 import Disclaimer from "components/ui/Disclaimer";
 import Footer from "components/ui/Footer";
-
-initializePresets();
 
 function App() {
   return (

@@ -3,27 +3,29 @@ import DigitalDisplay from "./DigitalDisplay";
 import ParameterSection from "./SettingsCard";
 import TextButton from "components/ui/TextButton";
 import useDrumkitStore from "stores/useDrumkitStore";
-import { deletePreset, loadPreset, savePreset } from "utils/storage";
 import { useEffect, useState } from "react";
 import { toast } from "react-toastify";
+import usePresetStore from "stores/usePresetStore";
 
 export default function PresetControls() {
   const [presetNumber, setPresetNumber] = useState(1);
   const { sequence, settings, instrumentParameterMap, clearPattern, importPreset } =
     useDrumkitStore();
 
+  const { presetMap, savePreset, deletePreset } = usePresetStore();
+
   /**
    * Update store when preset changes
    */
   useEffect(() => {
-    const preset = loadPreset(presetNumber.toString());
+    const preset = presetMap.data[presetNumber.toString()];
 
     if (preset) {
       importPreset(preset);
     } else {
       clearPattern();
     }
-  }, [presetNumber, importPreset, clearPattern]);
+  }, [presetNumber, importPreset, clearPattern, presetMap.data]);
 
   const handlePrevPreset = () => {
     if (presetNumber === 1) {
