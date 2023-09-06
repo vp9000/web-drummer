@@ -1,25 +1,16 @@
+import { PRESET_VERSION } from "data/constants";
 import { PresetMap } from "types";
 
 export const processPresetData = (input: string): PresetMap => {
-  const data = JSON.parse(input);
+  const rawInput = JSON.parse(input);
 
-  if (!(typeof data === "object" && !Array.isArray(data) && data !== null)) {
+  if (!(typeof rawInput === "object" && !Array.isArray(rawInput) && rawInput !== null)) {
     throw new Error("Input is not an object");
   }
 
-  Object.values(data).forEach(presetData => {
-    if (!presetData?.sequence) {
-      throw new Error("No sequence data present");
-    }
+  if (rawInput?.version !== PRESET_VERSION) {
+    throw new Error("Invalid preset version");
+  }
 
-    if (!presetData?.settings) {
-      throw new Error("No settings data present");
-    }
-
-    if (!presetData?.instrumentParameterMap) {
-      throw new Error("No instrument parameter data present");
-    }
-  });
-
-  return data as PresetMap;
+  return rawInput as PresetMap;
 };

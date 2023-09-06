@@ -16,6 +16,8 @@ export const MIN_BPM = 50;
 
 export const MAX_BPM = 200;
 
+export const PRESET_VERSION = 1;
+
 export const STORAGE_KEY_PRESET = "web-drummer-presets";
 
 export const HIDE_DISCLAIMER_KEY = "web-drummer-hide-disclaimer";

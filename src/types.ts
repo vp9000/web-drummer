@@ -36,4 +36,7 @@ export type Preset = {
   instrumentParameterMap: InstrumentParameterMap;
 };
 
-export type PresetMap = { [key: string]: Preset };
+export type PresetMap = {
+  version: string | number;
+  data: { [key: string]: Preset };
+};
